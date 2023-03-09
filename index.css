@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  width: 375px;
+  margin: 100px auto;
+  
+  box-shadow: 0px 10px 20px #E9E9EA;
+  border-radius: 5px;
+}
+/* Nav Bar */
+
+header {
+  max-width: 375px;
+
+}
+nav {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+.profile-img{
+  width: 32.33px;
+  height: 34px;
+  margin-top: 20px;
+}
+.chat-img{
+  width: 32.33px;
+  height: 34px;
+  margin-top: 20px;
+}
+.logo-img{
+  width: 84px;
+  height: 42px;
+  margin-top: 20px;
+}
+
+/* End of Nav Bar */
+
+/* Img section */
+.img-section {
+  max-width: 375px;
+  margin: 0 auto;
+}
+.img-container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+.dog-img{
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+.name{
+  color: white;
+  position: absolute;
+  bottom: 80px;
+  left: 10px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+}
+.greeting{
+  color: #B7B7B7;
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  height: 20px;
+}
+.like-status{
+  width: 150.91px;
+  height: 70.16px;
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  transform: rotate(-30deg);
+  display: none;
+}
+.nope-status{
+  width: 150.91px;
+  height: 70.16px;
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  transform: rotate(-30deg);
+  display: none;
+}
+/* end of Img Section */
+
+/* Btn Container */
+.btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  
+}
+.nope-btn{
+  width: 91.87px;
+  height: 91.87px;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 10px 20px #E9E9EA;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+.nope-btn:hover {
+  background-color: #ffe7ef;
+}
+.like-btn{
+  width: 91.87px;
+  height: 91.87px;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 10px 20px #E9E9EA;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.like-btn:hover{
+  background-color: #DBFFF4;
+}
+
+/* JavaScript Active Class */
