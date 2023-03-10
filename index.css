@@ -87,7 +87,7 @@ nav {
 .like-status{
   width: 150.91px;
   height: 70.16px;
-  top: 50px;
+  top: 60px;
   left: 25px;
   transform: rotate(-30deg);
   position: absolute;
@@ -96,7 +96,7 @@ nav {
 .nope-status{
   width: 150.91px;
   height: 70.16px;
-  top: 50px;
+  top: 60px;
   left: 25px;
   transform: rotate(-30deg);
   position: absolute;
