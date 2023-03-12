@@ -8,12 +8,10 @@ const likeStatus = document.querySelector(".like-status")
 const nopeStatus = document.querySelector(".nope-status")
 
 
-let arrNum = [0, 1, 2]
-
 //Get next Dog Func
 function getNextDog() {
-  let nextNumber = arrNum.shift()
-  let getNextDog = new Dogs(dogs[nextNumber])
+  let nextDog = dogs.shift()
+  let getNextDog = new Dogs(nextDog)
   return getNextDog ? getNextDog : {}
 }
 // 
@@ -34,19 +32,16 @@ function gotLiked() {
   getDogs.hasBeenSwiped = true
   likeStatus.classList.add("status-active")
   nopeStatus.classList.remove("status-active")
-  if (getDogs.hasBeenLiked && getDogs.hasBeenSwiped) {
-    if (arrNum.length > 0) {
-      setTimeout(() => {
+    setTimeout(() => {
+      if (dogs.length > 0) {
         getDogs = getNextDog()
         render()
         likeStatus.classList.remove("status-active")
-      }, 2000)
-    } else {
-      setTimeout(() => {
+      } else {
         imgContainer.classList.add("display-none")
-      }, 3000)
-    }
-  }
+      }
+    }, 500) 
+  
 }
 
 // Nope
@@ -55,20 +50,17 @@ function gotNope() {
   nopeStatus.classList.add("status-active")
   likeStatus.classList.remove("status-active")
 
-  if (getDogs.hasBeenSwiped) {
-    if (arrNum.length > 0) {
-      setTimeout(() => {
-        getDogs = getNextDog()
-        render()
-        nopeStatus.classList.remove("status-active")
-      }, 2000)
+  setTimeout(() => {
+    if (dogs.length > 0) {
+      getDogs = getNextDog()
+      render()
+      nopeStatus.classList.remove("status-active")
     } else {
-      setTimeout(() => {
-        imgContainer.classList.add("display-none")
-      }, 2000)
-    }
+      imgContainer.classList.add("display-none")
+      }
+     }, 500)
     
-  }
+  
 }
 
 likeBtn.addEventListener("click", gotLiked)
